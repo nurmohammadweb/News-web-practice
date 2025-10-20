@@ -15,7 +15,10 @@ const Navbar = () => {
       </div>
       <div className="login-btn flex gap-5">
         <img src={userImg} alt="" />
-       <Link to="/auth/login"> <button className="btn btn-primary px-10 ">Login</button></Link>
+        {
+          user ? (<button className="btn btn-primary px-10 ">LogOut</button>) : (<Link to="/auth/login"> <button className="btn btn-primary px-10 ">Login</button></Link>)
+        }
+       
       </div>
     </div>
   );
